@@ -1,0 +1,124 @@
+.content {
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.name {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.nameb {
+    color: #000;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.verified {
+    color: #cfcfcf;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.verifiedb {
+    color: #000;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.test-header {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.test-quote {
+    color: #cfcfcf;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.8;
+    text-align: justify;
+}
+
+.test-headerb {
+    color: #000;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.test-quoteb {
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.7;
+    text-align: justify;
+}
+
+#daniel {
+    background: #7541C8;
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-position: 82% 0%;
+    background-repeat: no-repeat;
+}
+
+#jonathan {
+    background: #48556A;
+}
+
+#patrick {
+    background: #18202d;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.border-img {
+    border: 2px solid #fcfcfc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+.border-imgb {
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.links {
+    font-weight: 700;
+}
+.links:hover {
+    text-decoration: underline;
+}
+#techt {
+    margin-right: 25px;
+    color: #e9603e;
+}
+#tecss {
+    margin-right: 25px;
+    color: #268fe4;
+}
+#tecjs {
+    margin-right: 25px;
+    color: #f0db4f;
+}
+#tecgh {
+    margin-left: 25px;
+    color: #fafafa;
+}
+#tecli {
+    margin-left: 25px;
+    color: #0072b1;
+}
+.bulmaLink {
+    position: relative;
+    margin-top: 70px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
