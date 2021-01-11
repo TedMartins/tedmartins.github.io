@@ -14,5 +14,5 @@ I just used svg files for the logo and badges and customized the smartphones ima
 
 You can see the project running at:
 
-[https://tedmartins.github.io/challenges/](https://tedmartins.github.io/dinogame/)
+[https://tedmartins.github.io/challenges/DIO-Instagram-Frontpage/](https://tedmartins.github.io/challenges/DIO-Instagram-Frontpage/)
 
