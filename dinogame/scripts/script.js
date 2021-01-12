@@ -62,7 +62,7 @@ function createCactus() {
             // Game 0ver
             clearInterval(leftInterval);
             isGameOver = true;
-            document.getElementById("game-over").innerHTML = '<div id="game-over"><h2 class="subtitle is-size-1 is-bold has-text-centered mb-0"">Game Over<p id="newfont" class="subtitle is-size-6 is-bold has-text-centered">Your Score was: ' + points + ' points</p><button class="play" onClick="window.location.reload();">Play Again</button></h2></div>';
+            document.getElementById("game-over").innerHTML = '<div id="game-over"><h2 class="subtitle is-size-1 is-bold has-text-centered mb-0"">Game Over<p id="newfont" class="subtitle is-size-6 is-bold has-text-centered">Your Score is: ' + points + ' points</p><button class="play" onClick="window.location.reload();">Play Again</button></h2></div>';
         } else {
             cactusPosition -= 10;
             cactus.style.left = cactusPosition + 'px';
