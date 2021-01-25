@@ -22,7 +22,7 @@ Your users should be able to:
 
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
-## The Result
+## The result
 
 You can check the result of this challenge following the link:
 
