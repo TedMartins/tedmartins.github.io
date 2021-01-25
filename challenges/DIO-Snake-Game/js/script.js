@@ -54,7 +54,7 @@ function startGame() {
             clearInterval(game);
             Swal.fire({
                 title: 'Game Over',
-                html: 'Your score is:<br><br><strong>' + score + ' points.</strong><br><br>Would you like to play gain?<br>',
+                html: 'Your score is:<br><br><strong>' + score + ' points.</strong><br><br>Would you like to play again?<br>',
                 icon: 'none',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
