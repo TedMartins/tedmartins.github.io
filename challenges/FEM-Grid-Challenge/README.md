@@ -22,12 +22,12 @@ Your users should be able to:
 
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
-## Result
+## The Result
 
 You can check the result of this challenge following the link:
 
 [https://tedmartins.github.io/challenges/FEM-Grid-Challenge/](https://tedmartins.github.io/challenges/FEM-Grid-Challenge/)
 
-I used Bulma Framework [Bulma.io](https://bulma.io) to make the grid, It was a good opportunity to learn more about the tile element and its usability.
+I used Bulma Framework ([Bulma.io](https://bulma.io)) to make the grid, It was a good opportunity to learn more about the tile element and its usability.
 
 
