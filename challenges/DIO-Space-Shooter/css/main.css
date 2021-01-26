@@ -12,11 +12,13 @@ body {
     background-position: cover;
     overflow-y: hidden; 
     overflow-x: hidden; 
+    max-width: 1024;
+    max-height: 768;
 }
 
 #main-play-area {
     height: 600px;
-    width: 100%;
+    width: 1280px;
 }
 
 .player-shooter {
@@ -29,12 +31,24 @@ body {
 
 .shoot {
     position: absolute;
-    width: 60px;
+    width: 75px;
     height: 30px;
 }
 
 .alien {
-    position: relative;
+    position: absolute;
     height: 52px;
     width: 75px;
+}
+
+.alien-transition {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.dead-alien {
+    height: 52px;
+    width: 75px;
+    position: absolute;
+    opacity: 0;
 }
