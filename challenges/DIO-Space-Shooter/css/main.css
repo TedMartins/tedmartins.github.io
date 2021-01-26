@@ -8,20 +8,25 @@ body {
     margin: 0;
     font-family: sans-serif;
     background-color: #dddddd;
+    background-image: url(../img/background.gif);
+    background-position: cover;
 }
 
 #main-play-area {
-    background-color: #222;
-    background-image: url(../img/background.gif);
     height: 600px;
-    width: 800px;
-    background-position: cover;
+    width: 100%;
 }
 
 .player-shooter {
     position: relative;
     width: 150px;
     height: 52px;
-    margin-left: 20px;
-    margin-top: 274px;
+    left: 100px;
+    top: 274px;
+}
+
+.shoot {
+    position: absolute;
+    width: 60px;
+    height: 30px;
 }
