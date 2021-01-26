@@ -10,6 +10,8 @@ body {
     background-color: #dddddd;
     background-image: url(../img/background.gif);
     background-position: cover;
+    overflow-y: hidden; 
+    overflow-x: hidden; 
 }
 
 #main-play-area {
@@ -29,4 +31,10 @@ body {
     position: absolute;
     width: 60px;
     height: 30px;
+}
+
+.alien {
+    position: relative;
+    height: 52px;
+    width: 75px;
 }
