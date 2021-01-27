@@ -1,7 +1,10 @@
-const myShip = document.querySelector('.player-shooter');
+const myShip = document.querySelector('.spaceship');
 const playArea = document.querySelector('#main-play-area');
 const aliensImg = ['./img/enemy-1.png', './img/enemy-2.png', './img/enemy-3.png'];
 let alienInterval;
+let spawnAlien = 1000; 
+let alienVelocity = 4;
+let points = 0;
 
 function moveShip(event) {
     if(event.key === 'ArrowUp'){
@@ -14,6 +17,56 @@ function moveShip(event) {
         event.preventDefault();
         fireBall();
     }
+}
+
+function myScore(){
+    if(points <= 0 && points <= 1000){
+        spawnAlien = 1000;
+        alienVelocity = 4;
+        console.log(alienVelocity);
+        console.log(spawnAlien);
+        console.log(points);
+        console.log('very easy');
+    } else if(points >= 1001 && points <= 2000) {
+        spawnAlien = spawnAlien - 20;
+        alienVelocity = alienVelocity + 0.5;
+        console.log(alienVelocity);
+        console.log(spawnAlien);
+        console.log(points);
+        console.log('easy');
+    } else if(points >= 2001 && points <= 3500) {
+        spawnAlien = spawnAlien - 10;
+        alienVelocity = alienVelocity;
+        console.log(alienVelocity);
+        console.log(spawnAlien);
+        console.log(points);
+        console.log('normal');
+    } else if(points >= 3501 && points <= 5000) {
+        spawnAlien = spawnAlien - 1;
+        alienVelocity = alienVelocity + 0.1;
+        console.log(alienVelocity);
+        console.log(spawnAlien);
+        console.log(points);
+        console.log('normal +');
+    } else if(points >= 5001 && points <= 7500) {
+        spawnAlien = spawnAlien - 1;
+        alienVelocity = alienVelocity;
+        console.log(alienVelocity);
+        console.log(spawnAlien);
+        console.log(points);
+        console.log('hard');
+    } else if(points >= 7501 && points <= 10000) {
+        spawnAlien = spawnAlien - 1;
+        alienVelocity = alienVelocity + 0.1;
+        console.log('very hard');
+    } else if(points > 10000 ){
+        spawnAlien = spawnAlien - 5;
+        alienVelocity = alienVelocity + 0.2;
+        console.log(alienVelocity);
+        console.log(spawnAlien);
+        console.log(points);
+        console.log('game-over?');
+    } 
 }
 
 function moveUp() {
@@ -61,6 +114,9 @@ function moveShoot(shoot) {
         let aliens = document.querySelectorAll('.alien');
         aliens.forEach((alien) => {
             if(checkCollision(shoot, alien)) {
+                points = points + 100;
+                score();
+                myScore();
                 alien.src = './img/explosion.png';
                 alien.classList.remove('alien');
                 alien.classList.add('dead-alien');
@@ -103,7 +159,7 @@ function moveAlien(alien) {
                 // gameOver();
             } 
         } else {
-            alien.style.left = `${xPosition -4}px`;
+            alien.style.left = `${xPosition - alienVelocity}px`;
         }
     }, 30);
 }
@@ -115,7 +171,7 @@ function checkCollision(shoot, alien) {
     let alienTop = parseInt(alien.style.top);
     let alienLeft = parseInt(alien.style.left);
     let alienBottom = alienTop - 52;
-    if(shootLeft != 725 && shootLeft + 0 >= alienLeft) {
+    if(shootLeft != 725 && shootLeft + 75 >= alienLeft) {
         if(shootBottom <= alienTop && shootTop >= alienBottom ) {
             return true;
         } else {
@@ -126,11 +182,15 @@ function checkCollision(shoot, alien) {
     }
 }
 
+let score = () => {
+    document.getElementById("points").innerHTML = points;
+}
+
 window.addEventListener('keydown', moveShip);
 
 alienInterval = setInterval(() => {
     createAliens();
-}, 600);
+}, spawnAlien);
 
 
 
