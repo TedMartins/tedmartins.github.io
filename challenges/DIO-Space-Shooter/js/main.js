@@ -111,14 +111,12 @@ function moveAlien(alien) {
 function checkCollision(shoot, alien) {
     let shootTop = parseInt(shoot.style.top);
     let shootLeft = parseInt(shoot.style.left);
-    let shootBottom = shootTop - 60;
-    let shootTop2 = shootBottom + 60;
+    let shootBottom = shootTop - 30;
     let alienTop = parseInt(alien.style.top);
     let alienLeft = parseInt(alien.style.left);
     let alienBottom = alienTop - 52;
-    let alienTop2 = alienBottom + 52; 
-    if(shootLeft != 725 && shootLeft + 50 >= alienLeft) {
-        if(shootTop2 <= alienTop2 && shootTop >= alienBottom) {
+    if(shootLeft != 725 && shootLeft + 0 >= alienLeft) {
+        if(shootBottom <= alienTop && shootTop >= alienBottom ) {
             return true;
         } else {
             return false;
