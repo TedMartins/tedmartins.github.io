@@ -64,12 +64,15 @@ function moveShoot(shoot) {
                 alien.src = './img/explosion.png';
                 alien.classList.remove('alien');
                 alien.classList.add('dead-alien');
+                clearInterval(shootInterval);
                 shoot.remove();
             }
         })
         if(xPosition >= 1300){
+            clearInterval(shootInterval);
             shoot.remove();
-        } else {
+        } 
+        else {
             shoot.style.left = `${xPosition + 8}px`;
         }
     }, 15);
@@ -82,7 +85,7 @@ function createAliens() {
     newAlien.classList.add('alien');
     newAlien.classList.add('alien-transition');
     newAlien.style.left = '1350px';
-    newAlien.style.top = `${Math.floor(Math.random() * 380 + 75)}px`;
+    newAlien.style.top = `${Math.floor(Math.random() * 500 + 75)}px`;
     playArea.appendChild(newAlien);
     moveAlien(newAlien); 
 }
@@ -92,8 +95,10 @@ function moveAlien(alien) {
         let xPosition = parseInt(window.getComputedStyle(alien).getPropertyValue('left'));
         if(xPosition <= -75) {
             if(Array.from(alien.classList).includes('dead-alien')) {
+                clearInterval(moveAlienInterval);
                 alien.remove();
             } else {
+                clearInterval(moveAlienInterval);
                 alien.remove();
                 // gameOver();
             } 
@@ -106,12 +111,14 @@ function moveAlien(alien) {
 function checkCollision(shoot, alien) {
     let shootTop = parseInt(shoot.style.top);
     let shootLeft = parseInt(shoot.style.left);
-    let shootBottom = shootTop - 30;
+    let shootBottom = shootTop - 60;
+    let shootTop2 = shootBottom + 60;
     let alienTop = parseInt(alien.style.top);
     let alienLeft = parseInt(alien.style.left);
     let alienBottom = alienTop - 52;
-    if(shootLeft != 1225 && shootLeft + 75 >= alienLeft) {
-        if(shootTop <= alienTop && shootTop >= alienBottom) {
+    let alienTop2 = alienBottom + 52; 
+    if(shootLeft != 725 && shootLeft + 50 >= alienLeft) {
+        if(shootTop2 <= alienTop2 && shootTop >= alienBottom) {
             return true;
         } else {
             return false;
@@ -125,7 +132,7 @@ window.addEventListener('keydown', moveShip);
 
 alienInterval = setInterval(() => {
     createAliens();
-}, 1000);
+}, 600);
 
 
 
