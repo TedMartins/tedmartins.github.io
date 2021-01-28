@@ -1,6 +1,8 @@
 const myShip = document.querySelector('.spaceship');
 const playArea = document.querySelector('#main-play-area');
 const aliensImg = ['./img/enemy-1.png', './img/enemy-2.png', './img/enemy-3.png'];
+const titleScreen = document.querySelector('.title-screen');
+const startBtn = document.querySelector('.start-btn');
 let alienInterval;
 let spawnAlien = 1000; 
 let alienVelocity = 4;
@@ -23,49 +25,39 @@ function myScore(){
     if(points <= 0 && points <= 1000){
         spawnAlien = 1000;
         alienVelocity = 4;
-        console.log(alienVelocity);
-        console.log(spawnAlien);
-        console.log(points);
-        console.log('very easy');
-    } else if(points >= 1001 && points <= 2000) {
+    } else if(points >= 1001 && points <= 2000){
         spawnAlien = spawnAlien - 20;
-        alienVelocity = alienVelocity + 0.5;
-        console.log(alienVelocity);
-        console.log(spawnAlien);
-        console.log(points);
-        console.log('easy');
-    } else if(points >= 2001 && points <= 3500) {
+        alienVelocity = alienVelocity + 0.4;
+    } else if(points >= 2001 && points <= 3500){
         spawnAlien = spawnAlien - 10;
         alienVelocity = alienVelocity;
-        console.log(alienVelocity);
-        console.log(spawnAlien);
-        console.log(points);
-        console.log('normal');
-    } else if(points >= 3501 && points <= 5000) {
-        spawnAlien = spawnAlien - 1;
+    } else if(points >= 3501 && points <= 5000){
+        spawnAlien = spawnAlien - 3;
         alienVelocity = alienVelocity + 0.1;
-        console.log(alienVelocity);
-        console.log(spawnAlien);
-        console.log(points);
-        console.log('normal +');
-    } else if(points >= 5001 && points <= 7500) {
-        spawnAlien = spawnAlien - 1;
+    } else if(points >= 5001 && points <= 7500){
+        spawnAlien = spawnAlien - 3;
         alienVelocity = alienVelocity;
-        console.log(alienVelocity);
-        console.log(spawnAlien);
-        console.log(points);
-        console.log('hard');
-    } else if(points >= 7501 && points <= 10000) {
-        spawnAlien = spawnAlien - 1;
-        alienVelocity = alienVelocity + 0.1;
-        console.log('very hard');
-    } else if(points > 10000 ){
+    } else if(points >= 7501 && points <= 10000){
         spawnAlien = spawnAlien - 5;
-        alienVelocity = alienVelocity + 0.2;
-        console.log(alienVelocity);
-        console.log(spawnAlien);
-        console.log(points);
-        console.log('game-over?');
+        alienVelocity = alienVelocity;
+    } else if(points >= 7501 && points <= 10400){
+        spawnAlien = spawnAlien - 10;
+        alienVelocity = 10;
+    } else if(points > 10401 && points < 12000){
+        spawnAlien = spawnAlien - 10;
+        alienVelocity = alienVelocity;
+    } else if(points >= 12000 && points < 13000){
+        spawnAlien = spawnAlien - 10;
+        alienVelocity = alienVelocity;
+    } else if(points >= 13000 && points < 14000){
+        spawnAlien = spawnAlien - 10;
+        alienVelocity = alienVelocity;
+    } else if(points >= 14000 && points < 15000){
+        spawnAlien = spawnAlien - 10;
+        alienVelocity = alienVelocity;
+    } else if(points >= 15000 ){
+        spawnAlien = spawnAlien - 10;;
+        alienVelocity = alienVelocity;
     } 
 }
 
@@ -156,7 +148,7 @@ function moveAlien(alien) {
             } else {
                 clearInterval(moveAlienInterval);
                 alien.remove();
-                // gameOver();
+                gameOver();
             } 
         } else {
             alien.style.left = `${xPosition - alienVelocity}px`;
@@ -186,11 +178,39 @@ let score = () => {
     document.getElementById("points").innerHTML = points;
 }
 
-window.addEventListener('keydown', moveShip);
+startBtn.addEventListener('click', (event) => {
+    playGame();
+})
 
-alienInterval = setInterval(() => {
-    createAliens();
-}, spawnAlien);
+function playGame(){
+    let resetScore = () => {
+        document.getElementById("points").innerHTML = 0;
+    }
+    startBtn.style.display = 'none';
+    titleScreen.style.display = 'none';
+    window.addEventListener('keydown', moveShip);
+    alienInterval = setInterval(() => {
+        createAliens();
+    }, spawnAlien);
+        resetScore();
+}
+
+function gameOver(){
+    
+    window.removeEventListener('keydown', moveShip);
+    clearInterval(alienInterval);
+    let aliens = document.querySelectorAll('.alien');
+    aliens.forEach((alien) => alien.remove());
+    let shoots = document.querySelectorAll('.shoot');
+    shoots.forEach((shoot) => shoot.remove());
+    setTimeout(() => {
+        alert('game-over');
+        myShip.style.top = '274';
+        startBtn.style.display = 'block';
+        titleScreen.style.display = 'block';
+    });
+}
+
 
 
 

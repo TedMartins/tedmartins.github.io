@@ -7,7 +7,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    background-color: #dddddd;
+    background-color: #222;
     background-image: url(../img/background.gif);
     background-position: cover;
     overflow-y: hidden; 
@@ -19,6 +19,19 @@ body {
 #main-play-area {
     height: 600px;
     width: 1280px;
+}
+
+.title-screen {
+    position: relative;
+    color: #ddd;
+    text-align: center;
+}
+
+.start-btn{
+    position: relative;
+    color: #ddd;
+    top: 9rem;
+    text-align: center;
 }
 
 .spaceship {
