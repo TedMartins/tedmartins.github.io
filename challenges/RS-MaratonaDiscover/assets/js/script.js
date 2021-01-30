@@ -34,6 +34,8 @@ const Transaction = {
     all: transactions,
     add(transaction){
         Transaction.all.push(transaction)
+
+        App.reload()
     },
 
     incomes() {
@@ -98,6 +100,10 @@ const DOM = {
         document
         .getElementById('totalDisplay')
         .innerHTML = Utils.formatCurrency(Transaction.total())
+    },
+
+    clearTransactions() {
+        DOM.transactionsContainer.innerHTML = ""
     }
 }
 
@@ -118,12 +124,23 @@ const Utils = {
     }
 }
 
+const App = {
+    init() {
+        Transaction.all.forEach((transaction) => {
+            DOM.addTransaction(transaction)
+        })
+        
+        DOM.updateBalance()
+        
+        
+    },
+    reload() {
+        DOM.clearTransactions()
+        App.init()
+    },
+}
 
-transactions.forEach(function(transaction) {
-    DOM.addTransaction(transaction)
-})
-
-DOM.updateBalance()
+App.init()
 
 Transaction.add({
     id: 39,
