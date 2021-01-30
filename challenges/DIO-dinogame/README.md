@@ -12,6 +12,6 @@ I added a button to replay the game after game over and also added a score. For 
 
 You can see the project running at:
 
-[https://tedmartins.github.io/dinogame/](https://tedmartins.github.io/dinogame/)
+[https://tedmartins.github.io/challenges/DIO-dinogame/](https://tedmartins.github.io/challenges/DIO-dinogame/)
 
 Enjoy!
