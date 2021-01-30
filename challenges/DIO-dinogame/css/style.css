@@ -1,0 +1,124 @@
+body {
+    background: #FAFAFA;
+}
+#frame{
+    background-color: #FAFAFA;
+    height: 225px;
+}
+.dinoTitle {
+    font-family: 'Grandstander', cursive;
+    font-weight: 700;
+}
+.byted {
+    font-family: 'Signika', sans-serif;
+}
+.dino {
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/dino.png);
+    position: absolute;
+    bottom: 0;
+}
+
+.score {
+    width: 100%;
+    height: 20px;
+    font-size: 14px;
+    position: absolute;
+    text-align: right;
+    right: 50px;
+    top: 5;
+}
+
+#points {
+    width: 100%;
+    height: 20px;
+    font-size: 14px;
+    position: absolute;
+    text-align: right;
+    right: 20px;
+    top: 5;
+}
+
+#newfont {
+    font-family: 'Signika', sans-serif;
+}
+
+.cactus {
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/cactus.png);
+    position: absolute;
+    bottom: 0;
+}
+#game-over{
+    color: #333;
+    margin-top: 18px;
+    font-family: 'Grandstander', cursive;
+    height: 200px;
+}
+@keyframes slideright{
+    from {
+        background-position: 70000%;
+    }
+    to {
+        background-position: 0;
+    }
+}
+.background {
+    position: relative;
+    bottom: 0;
+    background-image: url(../images/background.png);
+    background-repeat: repeat-x;
+    animation: slideright 600s infinite linear;
+    width: 100%;
+    height: 200px;
+}
+.play {
+    background-color: #f0d01c; /* Green */
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.play:hover {
+    background-color: #f0a61c; /* Green */
+    color: white;
+}
+.links {
+    font-weight: 700;
+}
+.links:hover {
+    text-decoration: underline;
+}
+#techt {
+    margin-right: 25px;
+    color: #e9603e;
+}
+#tecss {
+    margin-right: 25px;
+    color: #268fe4;
+}
+#tecjs {
+    margin-right: 25px;
+    color: #f0db4f;
+}
+#tecgh {
+    margin-left: 25px;
+    color: #fafafa;
+}
+#tecli {
+    margin-left: 25px;
+    color: #0072b1;
+}
+.bulmaLink {
+    position: relative;
+    margin-top: 70px;
+}
