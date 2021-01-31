@@ -115,6 +115,18 @@ const DOM = {
 }
 
 const Utils = {
+    formatAmount(value){
+        value = Number(value) * 100
+        
+        return value
+    },
+
+    formatDate(date){
+        const splittedDate = date.split("-")
+
+        return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
+    },
+
     formatCurrency(value) {
         const signal = Number(value) < 0 ? "-" : ""
 
@@ -136,7 +148,7 @@ const Form = {
     amount: document.querySelector('input#amount'),
     date: document.querySelector('input#date'),
 
-    getValues(){
+    getValues() {
         return {
             description: Form.description.value,
             amount: Form.amount.value,
@@ -153,12 +165,26 @@ const Form = {
                 throw new Error("Por favor, preencha todos os campos.")
         }
     },
+
+    formatValues() {
+        let { description, amount, date } = Form.getValues()
+
+        amount = Utils.formatAmount(amount)
+
+        date = Utils.formatDate(date)
+
+        return {
+            
+        }
+    },
+
+
     submit(event) {
         event.preventDefault()
 
         try {
             Form.validateFields()
-            // 
+            Form.formatValues() 
             // 2:22:43
             //
             //
