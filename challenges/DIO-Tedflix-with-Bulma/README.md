@@ -8,14 +8,14 @@ Foram utilizadas as seguintes tecnologias:
 - CSS3;
 - jQuery;
 
-E o projeto possuí as seguintes dependencias:
+E o projeto possuí as seguintes dependências:
 
 - Bulma Framework;
 - OwlCarousel;
 - Modal-fx;
 - Font Awesome;
 
-Como funcionalidades adicionais foram inseridos modais para exibição do vídeo (trailer) e navegação através das setas do teclado no carrosel.
+Como funcionalidades adicionais foram inseridos modais para exibição do vídeo (trailer) e navegação através das setas do teclado no carrossel.
 
 O projeto pode ser visualizado online em:
 
