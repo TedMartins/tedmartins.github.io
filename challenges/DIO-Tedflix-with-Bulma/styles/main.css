@@ -81,6 +81,11 @@ header nav {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.modal-title {
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .button-play {
     background-color: #fff;
     border: none;
@@ -161,4 +166,8 @@ header nav {
 
 #modal-opc {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-text {
+    text-align: justify;
 }
