@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    font-family: 'Press Start 2P', cursive;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+footer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-game {
+    height: 25rem;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.genius {
+    display: grid;
+    grid-template-areas:    'green red' 
+                            'yellow blue';
+    grid-gap: 1rem;
+    background-color: rgb(48, 52, 56);
+    border: none;
+    border-radius: 100%;
+    width: 25rem;
+    height: 25rem;
+}
+
+.blue {
+    grid-area: blue;
+    background-color: rgb(0, 81, 255);
+    border-bottom-right-radius: 100%;
+    border: 1rem solid rgb(48, 52, 56);
+    border-left: none;
+    border-top: none;
+}
+
+.red {
+    grid-area: red;;
+    background-color: rgb(238, 26, 26);
+    border-top-right-radius: 100%;
+    border: 1rem solid rgb(48, 52, 56);
+    border-left: none;
+    border-bottom: none;
+}
+
+.yellow {
+    grid-area: yellow;;
+    background-color: rgb(255, 255, 0);
+    border-bottom-left-radius: 100%;
+    border: 1rem solid rgb(48, 52, 56);
+    border-top: none;
+    border-right: none;
+}
+
+.green {
+    grid-area: green;
+    background-color: rgb(32, 175, 32);
+    border-top-left-radius: 100%;
+    border: 1rem solid rgb(48, 52, 56);
+    border-bottom: none;
+    border-right: none;
+}
+
+.selected {
+    opacity: 0.4;
+}
