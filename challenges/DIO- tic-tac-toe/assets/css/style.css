@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.square{
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    background: #eee;
+    display: inline-block;
+    padding: 40px;
+    font-size: 40px;
+    margin: 5px;
+    cursor: pointer;
+    color: #eee;
+    justify-content: center;
+    align-items: center;
+}
+
+.player, .winner {
+    font-size: 30px;
+    margin-top: 2rem;
+}
+
+button {
+    margin-top: 2rem;
+    width: 15rem;
+    height: 5rem;
+    background:dodgerblue;
+    color: mintcream;
+    cursor: pointer;
+    border: 0;
+    font-size: 2rem;
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
